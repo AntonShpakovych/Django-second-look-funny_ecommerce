@@ -1,0 +1,8 @@
+{% extends 'main/layout.html' %}
+{% block title %} Computer {% endblock %}
+{% block content %}
+<h1>Компьютеры</h1>
+{% for pc in object_list %}
+    {{ pc.brand_name }}
+{% endfor %}
+ {% endblock %}

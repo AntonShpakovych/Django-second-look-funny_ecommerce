@@ -1,0 +1,87 @@
+{% extends 'main/layout.html' %}
+{% block title %}{{laptop.brand_name}}{{laptop.model}}{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="tabs-details">
+        <a class="a_tabs" href="">ВСЕ ПРО ТОВАР</a>
+        <a class="a_tabs" href="">ХАРАКТЕРИСТИКИ</a>
+        <a class="a_tabs" href="">ВІДГУКИ</a>
+        <a class="a_tabs" href="">ПИТАННЯ</a>
+    </div>
+
+    <div class="all_product_info row row-cols-2">
+        <div class="with_all_product_info_img">
+            <img src="{{laptop.img_url}}" alt="">
+        </div>
+        <div class="with_all_product_info_charackters">
+           <h1 class="all_product_title">Ноутбук {{laptop.brand_name}} {{laptop.model}}</h1>
+           <hr>
+           <div class="options">
+               <div class="icon-152">
+                <i class="fas fa-laptop"><small> Діагональ екрану</small></i><br>
+                   <strong class="strong_for_icon">{{laptop.monitor}}"</strong>
+               </div>
+               <hr>
+               <div class="icon-179">
+                <i class="fas fa-microchip"><small> Процесcор</small></i><br>
+                <strong class="strong_for_icon">{{laptop.processor}}</strong>
+               </div>
+               <hr>
+               <div class="icon-179">
+                <i class="fas fa-memory"><small> Об’єм оперативної пам’яті</small></i><br>
+                <strong class="strong_for_icon">{{laptop.memory}}</strong>
+               </div>
+               <hr>
+               <div class="icon-104">
+                <i class="fas fa-hdd"><small>  Об'єм накопичувача</small></i><br>
+                <strong class="strong_for_icon">{{laptop.hard_drive}}</strong>
+                <hr>
+               </div>
+           </div>
+        </div>
+        <div class="describe_product">
+            <h1 class="describe_title">Опис</h1>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, ratione. Quia unde corporis doloribus cumque fuga inventore, amet similique saepe omnis ex veritatis architecto quasi nobis nihil est error quod ipsa libero tempore. Veritatis, eveniet sequi! Nemo quas quibusdam rerum dolores natus, nulla recusandae doloremque temporibus non porro cumque obcaecati possimus vel, animi nihil reiciendis hic dolor earum assumenda amet ipsam totam saepe. Laudantium minima autem ipsam fugit perferendis tempora, quos nihil consequuntur voluptate quas ratione quisquam veritatis aspernatur accusantium eos, non odio, quis assumenda delectus pariatur. Ab sint mollitia quia esse rem vitae veritatis voluptatibus voluptatum ratione porro fugiat, optio aperiam quam consequuntur veniam tempora voluptatem perspiciatis neque labore, sequi aspernatur in iste assumenda. Recusandae odio reprehenderit, alias autem voluptatem eum repellat praesentium perferendis unde consectetur iste dicta animi ipsam, dolores quam modi maiores! Dignissimos distinctio quae quia provident placeat sed quaerat recusandae ipsum eum, rerum sit animi quidem aliquid! Maxime, corrupti quam minima assumenda enim beatae accusantium cum, cumque corporis velit expedita rerum provident repudiandae consectetur, consequatur alias? Error quisquam laudantium animi nihil minus facere et eaque magnam numquam. Tempora temporibus eius reiciendis odio recusandae impedit accusamus suscipit, assumenda, quae obcaecati necessitatibus, laboriosam architecto dolorem ea quaerat quas nostrum. Amet earum repellat nesciunt rerum, laboriosam delectus hic, molestias labore magni adipisci quasi sequi sunt vel ducimus, praesentium enim dolore! Aliquid neque eaque voluptatum nostrum facilis, molestias repellendus tempore in magnam vitae fugiat, amet voluptatem assumenda iusto officia. Dicta ex repudiandae quasi assumenda iure cupiditate fugit fugiat quam. Sapiente labore vero nihil, facilis quia voluptates perferendis consequatur explicabo ipsum voluptatem quas, temporibus possimus sint ad velit provident, </div>
+        <div class="all_charackter">
+            <h1 class="title_charackter">Детальні характеристики</h1>
+            <div class="options">
+                <div class="icon-152">
+                 <i class="fas fa-laptop"><small> Діагональ екрану</small></i><br>
+                    <strong class="strong_for_icon">{{laptop.monitor}}"</strong>
+                </div>
+                <hr>
+                <div class="icon-179">
+                 <i class="fas fa-microchip"><small> Процесcор</small></i><br>
+                 <strong class="strong_for_icon">{{laptop.processor}}</strong>
+                </div>
+                <hr>
+                <div class="icon-179">
+                    <i class="fas fa-gamepad"><small> Відеокарта</small></i><br>
+                    <strong class="strong_for_icon">{{laptop.video_card}}</strong>
+                   </div>
+                   <hr>
+                <div class="icon-179">
+                 <i class="fas fa-memory"><small> Об’єм оперативної пам’яті</small></i><br>
+                 <strong class="strong_for_icon">{{laptop.memory}}</strong>
+                </div>
+                <hr>
+                <div class="icon-104">
+                 <i class="fas fa-hdd"><small>  Об'єм накопичувача</small></i><br>
+                 <strong class="strong_for_icon">{{laptop.hard_drive}}</strong>
+                 <hr>
+                </div>
+                <div class="icon-104">
+                    <i class="fas fa-angle-up"><small> Висота</small></i><br>
+                    <strong class="strong_for_icon">{{laptop.height}}mm</strong>
+                    <hr>
+                   </div>
+                <div class="icon-104">
+                <i class="fas fa-angle-right"><small> Ширина</small></i><br>
+                <strong class="strong_for_icon">{{laptop.width}}mm</strong>
+                <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

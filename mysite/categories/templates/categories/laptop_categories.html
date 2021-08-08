@@ -1,0 +1,30 @@
+{% extends 'main/layout.html' %}
+{% block title %} Laptop {% endblock %}
+{% block content %}
+<div class="container">
+    <div class="row row-cols-3 global_items_div">
+        {% for laptop in object_list %}
+        <div class="col item">
+            <img class="img_item" src='{{ laptop.img_url }}' alt="">
+            <p class="model_name">{{laptop.brand_name}} {{laptop.model}}</p>
+           <span class="config_span">{{laptop.processor}} {{laptop.video_card}} {{laptop.memory}}</span><br>
+           <span class="item-price">{{laptop.price}}<small>грн</small></span>
+           <a class = "more_details_a" href="{% url 'more-details' laptop.id %}">More details</a>
+           <div class="rating-area">
+            <input type="radio" id="star-5" name="rating" value="5">
+            <label for="star-5" title="Оценка «5»"></label>	
+            <input type="radio" id="star-4" name="rating" value="4">
+            <label for="star-4" title="Оценка «4»"></label>    
+            <input type="radio" id="star-3" name="rating" value="3">
+            <label for="star-3" title="Оценка «3»"></label>  
+            <input type="radio" id="star-2" name="rating" value="2">
+            <label for="star-2" title="Оценка «2»"></label>    
+            <input type="radio" id="star-1" name="rating" value="1">
+            <label for="star-1" title="Оценка «1»"></label>
+        </div>
+        </div>
+        {% endfor %}  
+    </div>
+</div>
+
+{% endblock %}
